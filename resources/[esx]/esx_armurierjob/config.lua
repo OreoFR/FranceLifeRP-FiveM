@@ -27,9 +27,9 @@ Config.ArmyStations = {
     AuthorizedWeapons = {
 	  { name = 'WEAPON_STUNGUN',          price = 300 },
 	  { name = 'WEAPON_FLAREGUN',         price = 300 },
-      { name = 'WEAPON_FIREWORK',         price = 525 },
+          { name = 'WEAPON_FIREWORK',         price = 525 },
 	  { name = 'WEAPON_KNIFE',            price = 75  },
-      { name = 'WEAPON_GOLFCLUB',         price = 125 },
+          { name = 'WEAPON_GOLFCLUB',         price = 125 },
 	  { name = 'WEAPON_SWITCHBLADE',      price = 90  },
 	  { name = 'WEAPON_DAGGER',           price = 160 },
 	  { name = 'WEAPON_BAT',              price = 150 },
@@ -61,12 +61,12 @@ Config.ArmyStations = {
 	  { name = 'WEAPON_HEAVYSHOTGUN',     price = 2300},
 	  { name = 'WEAPON_SAWNOFFSHOTGUN',   price = 2600},
 	  { name = 'WEAPON_DBSHOTGUN',        price = 2750},
-      { name = 'WEAPON_AUTOSHOTGUN',      price = 3000},
+          { name = 'WEAPON_AUTOSHOTGUN',      price = 3000},
 	  { name = 'WEAPON_PUMPSHOTGUN',      price = 2250},
 	  { name = 'WEAPON_BZGAS',            price = 1875},
 	  { name = 'WEAPON_GRENADE',          price = 15000},
 	  { name = 'WEAPON_STICKYBOMB',       price = 18750}, 
-      { name = 'WEAPON_FIREEXTINGUISHER', price = 1 },
+          { name = 'WEAPON_FIREEXTINGUISHER', price = 1 },
     },
 
 	AuthorizedVehicles = {
