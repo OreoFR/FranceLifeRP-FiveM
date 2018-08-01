@@ -1,0 +1,39 @@
+Version 165 31
+{
+	Shaders
+	{
+		default_spec.sps
+		{
+			DiffuseSampler ah_abbmainmet2
+			UseTessellation 0.00000000
+			SpecularIntensityMult 0.12500000
+			SpecularFalloffMult 100.00000000
+			SpecularFresnel 0.75000000
+		}
+		emissive.sps
+		{
+			DiffuseSampler v_10_liquorfagdisplay\ah_liquor_brand2.otx
+			HardAlphaBlend 1.00000000
+			UseTessellation 0.00000000
+			EmissiveMultiplier 1.00000000
+		}
+	}
+	Skeleton null
+	LodGroup
+	{
+		Center 1.71593300 0.70123800 -0.59403800
+		Radius 1.04889900
+		AABBMin 1.05400500 0.48853800 -1.37940300
+		AABBMax 2.37786100 0.91393800 0.19132800
+		High 9998.00000000
+		{
+			v_10_liquorfagdisplay\v_10_liquorfagdisplay_high.mesh 0
+		}
+		Med 9998.00000000
+		Low 9998.00000000
+		Vlow 9998.00000000
+	}
+	Joints null
+	Light null
+	Bound null
+}
