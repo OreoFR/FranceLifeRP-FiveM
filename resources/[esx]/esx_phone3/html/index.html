@@ -1,0 +1,369 @@
+<html>
+
+<head>
+  
+  <meta charset="utf-8"/>
+  
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet" href="css/animate.css" type="text/css" />
+
+</head>
+
+<body>
+	
+	<div id="phone" class="animated slideInUp">
+		
+		<div id="screen">
+			
+			<div class="status-bar">
+		    <ul class="signal">
+		        <li></li>
+		        <li></li>
+		        <li></li>
+		        <li></li>
+		        <li></li>
+		    </ul>
+		    <span class="network">Orange F</span>
+		    <div class="time"><span class="hour">0</span>:<span class="minute">00</span></div>
+		    <div class="battery"><span class="percentage">100%</span><b class="fa fa-battery-full fa-fw"></b>
+		    </div>
+			</div>
+
+			<div id="app-home" class="app">
+
+				<div class="app-inner">
+
+					<div class="menu-icon menu-icon-contacts" data-app="contacts">
+						<div class="menu-icon-inner">
+							<i class="fa fa-address-book fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Contacts</div>
+					</div>
+
+					<div class="menu-icon menu-icon-messages" data-app="messages">
+						<div class="menu-icon-inner">
+							<i class="fa fa-envelope fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Messages</div>
+						<div class="counter">5</div>
+					</div>
+
+					<div class="menu-icon menu-icon-police" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Police&quot;, &quot;number&quot;: &quot;police&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-shield fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Gendarmerie</div>
+					</div>
+
+					<div class="menu-icon menu-icon-ambulance" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Ambulance&quot;, &quot;number&quot;: &quot;ambulance&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-ambulance fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Pompier</div>
+					</div>
+
+				<!--	<div class="menu-icon menu-icon-insurer" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Assurance&quot;, &quot;number&quot;: &quot;insurer&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-cab fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Assurance</div>
+					</div> -->
+
+				<!--	<div class="menu-icon menu-icon-lawyer" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Avocat&quot;, &quot;number&quot;: &quot;lawyer&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-comment-o fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Avocat</div>
+					</div> -->
+
+					<div class="menu-icon menu-icon-bank" data-app="bank">
+						<div class="menu-icon-inner">
+							<i class="fa fa-cc-visa fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Banque</div>
+					</div>
+
+				<!--	<div class="menu-icon menu-icon-unemployed" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Chômeur&quot;, &quot;number&quot;: &quot;unemployed&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-angellist fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Chômeur</div>
+					</div> -->
+
+					<div class="menu-icon menu-icon-cardealer" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Concession&quot;, &quot;number&quot;: &quot;cardealer&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-car fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Concess</div>
+					</div>
+
+				 <div class="menu-icon menu-icon-vigne" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Vigne&quot;, &quot;number&quot;: &quot;vigne&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-cutlery fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Vigneron</div>
+					</div> 
+
+				<!--	<div class="menu-icon menu-icon-governor" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Gouverneur&quot;, &quot;number&quot;: &quot;governor&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-user fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Gouvernement</div>
+					</div> -->
+
+					<div class="menu-icon menu-icon-realestateagent" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Immobilier&quot;, &quot;number&quot;: &quot;realestateagent&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-building fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Agent Immobilier</div>
+					</div>
+
+					<div class="menu-icon menu-icon-journalist" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Journaliste&quot;, &quot;number&quot;: &quot;journalist&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-television fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">TF1</div>
+					</div>
+
+				<!--	<div class="menu-icon menu-icon-leboncoin" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;LeBonCoin&quot;, &quot;number&quot;: &quot;leboncoin&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-archive fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">LeBonCoin</div>
+					</div> -->
+
+				<!--	<div class="menu-icon menu-icon-lscustom" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;LS Custom&quot;, &quot;number&quot;: &quot;lscustom&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-tachometer fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">LS Custom</div>
+					</div> -->
+
+					<div class="menu-icon menu-icon-mecano" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Mecano&quot;, &quot;number&quot;: &quot;mecano&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-wrench fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Mecano</div>
+					</div>
+
+					<div class="menu-icon menu-icon-teamster" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Armurier&quot;, &quot;number&quot;: &quot;armurier&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-crosshairs fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Armurier</div>
+					</div> 
+
+					<div class="menu-icon menu-icon-teamster" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Armurier&quot;, &quot;number&quot;: &quot;armurier&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-truck fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Agent de Securite</div>
+					</div> 
+
+					<div class="menu-icon menu-icon-taxi" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;Taxi&quot;, &quot;number&quot;: &quot;taxi&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-cab fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">Taxi</div>
+					</div>
+
+					<!--<div class="menu-icon menu-icon-taxi" data-app="contact-action-message" data-args="{&quot;name&quot;: &quot;K.B.S&quot;, &quot;number&quot;: &quot;vehgroup&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-rocket fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">K.B.S</div>
+					</div>-->
+
+					<div class="menu-icon menu-icon-deepweb" data-app="contact-action-message" data-args="{&quot;deppweb&quot;: &quot;DeepWeb&quot;, &quot;number&quot;: &quot;deepweb&quot;}">
+						<div class="menu-icon-inner">
+							<i class="fa fa-user-secret fa-fw"></i>
+						</div>
+						<div class="menu-icon-label">DarkNet</div>
+					</div> -->
+
+				</div>
+
+			</div>
+
+			<div id="app-incoming-call" class="app">
+
+				<div class="app-inner">
+					
+					<div class="contact-infos">
+						<div class="contact-name"></div>
+						<div class="contact-number"></div>
+					</div>
+
+					<div class="contact-actions-wrapper">
+						<div class="contact-action action-accept" data-action="accept">
+							<i class="fa fa-phone fa-fw"></i>
+						</div>
+						<div class="contact-action action-deny" data-action="deny">
+							<i class="fa fa-phone fa-fw"></i>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="app-contacts" class="app">
+
+				<div class="app-inner">
+					
+					<div class="contact-actions">
+						<div class="add-contact">Nouveau contact</div>
+					</div>
+
+					<div class="contact-me">
+						<div class="contact"><div class="contact-name">&lt;Moi&gt;</div><div class="contact-number"></div></div>
+					</div>
+					
+					<div class="contact-list"></div>
+				</div>
+
+			</div>
+
+			<div id="app-contact-add" class="app">
+
+				<div class="app-inner">
+					
+					<div class="add-contact-wrapper">
+						<div><input type="text" name="add-contact-name" placeholder="John Smith"/></div>
+						<div><input type="number" name="add-contact-number" max="99999" placeholder="12345"/></div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="app-contact-actions" class="app">
+
+				<div class="app-inner">
+					
+					<div class="contact-infos">
+						<div class="contact-name"></div>
+						<div class="contact-number"></div>
+					</div>
+
+					<div class="contact-actions-wrapper">
+						<div class="contact-action action-call" data-action="call">
+							<i class="fa fa-phone fa-fw"></i>
+						</div>
+						<div class="contact-action action-message" data-action="message">
+							<i class="fa fa-envelope fa-fw"></i>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="app-contact-action-call" class="app">
+
+				<div class="app-inner">
+					
+					<div class="contact-infos">
+						<div class="contact-name"></div>
+						<div class="contact-number"></div>
+					</div>
+
+					<div class="loader">
+						<div class="circle"><i class="fa fa-circle fa-fw"></i></div>
+						<div class="circle"><i class="fa fa-circle fa-fw"></i></div>
+						<div class="circle"><i class="fa fa-circle fa-fw"></i></div>
+						<div class="info">Appel en cours</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div id="app-contact-action-message" class="app">
+
+				<div class="app-inner">
+
+					<div class="message-container"></div>
+
+					<div class="message-input">
+						<textarea name="message" placeholder="[U]      => GPS&#10;[ENTREE] => Ecrire message + activer souris"></textarea>
+					</div>
+
+					<div class="message-actions">
+						<input type="checkbox" name="anon">Anonyme</input>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="app-messages" class="app">
+
+				<div class="app-inner">
+					
+					<div class="contact-list"></div>
+
+				</div>
+
+			</div>
+
+			<div id="app-bank" class="app">
+
+				<div class="app-inner">
+					
+					<div class="logo">
+						<img src="img/apps/bank/logo.png" />
+					</div>
+
+					<div class="balance positive">0.00</div>
+					
+					<div class="button-container">
+						<div class="button" data-action="transfer">Faire un virement</div>
+						<!--<div class="button" data-action="contact">Nous contacter</div>-->
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="app-bank-transfer" class="app">
+				
+				<div class="app-inner">
+					<div class="contact-list"></div>
+				</div>
+
+			</div>
+
+			<div id="app-bank-transfer-menu" class="app">
+
+				<div class="app-inner">
+					
+					<div class="transfer-wrapper">
+						<div><input type="number" name="transfer-amount" placeholder="montant"/></div>
+					</div>
+
+				</div>
+
+			</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="scripts/mustache.min.js"></script>
+
+	<script src="scripts/app.js"></script>
+	<script src="scripts/apps/home.js"></script>
+	<script src="scripts/apps/messages.js"></script>
+	<script src="scripts/apps/incoming-call.js"></script>
+	<script src="scripts/apps/contacts.js"></script>
+	<script src="scripts/apps/contact-add.js"></script>
+	<script src="scripts/apps/contact-actions.js"></script>
+	<script src="scripts/apps/contact-action-call.js"></script>
+	<script src="scripts/apps/contact-action-message.js"></script>
+	<script src="scripts/apps/bank.js"></script>
+	<script src="scripts/apps/bank-transfer.js"></script>
+	<script src="scripts/apps/bank-transfer-menu.js"></script>
+
+</body>
+</html>
