@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SOSO| Loading screen</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.5/howler.core.min.js"></script>
+</head>
+<body>
+    <div class="backgroundOne"></div>
+    <div class="backgroundTwo"></div>
+
+    <div class="social">
+        
+    </div>
+
+    <div class="music">
+        <div class="title">
+            <div class="icon">
+                <img src="icon/music.png">
+            </div>
+            <div class="label"> 
+            </div>
+        </div>
+        <div class="submitedBy">
+            <div class="icon">
+                <img src="icon/person.png">
+            </div>
+            <div class="label">
+            </div>
+        </div>
+    </div>
+
+    <div class="website">
+        <div class="icon">
+            <img src="icon/website.png">
+        </div>
+        <div class="label">
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="label">
+        </div>
+        <div class="icon">
+            <img src="icon/crown.png">
+        </div>
+    </div>
+
+    <div class="logo">
+        
+    </div>
+    
+    <div class="onlinePlayers">
+        <div class="label"> 
+        </div>
+    </div>
+
+    <div class="tip">
+        <div class="icon">
+            <img src="icon/tip.png">
+        </div>
+        <div class="label">
+            
+        </div>
+    </div>
+    
+    <div class="progess-bar">
+        <div class="progess"></div>
+    </div>
+
+    <div class="loading-wrapper">
+        <div class="loading1"></div>
+        <div class="loading2"></div>
+        <div class="loading3"></div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+
+    <script type="text/javascript">
+        var count = 0;
+        var thisCount = 0;
+
+        const emoji = {
+            INIT_BEFORE_MAP_LOADED: ['🍉'],
+            INIT_AFTER_MAP_LOADED: ['🍋', '🍊'],
+            INIT_SESSION: ['🍐', '🍅', '🍆'],
+        };
+
+        const handlers = {
+            startInitFunctionOrder(data) {
+                count = data.count;
+            },
+
+            initFunctionInvoking(data) {
+                document.querySelector('.progess-bar .progess').style.left = '0%';
+                document.querySelector('.progess-bar .progess').style.width = ((data.idx / count) * 100) + '%';
+            },
+
+            startDataFileEntries(data) {
+                count = data.count;
+            },
+
+            performMapLoadFunction(data) {
+                ++thisCount;
+
+                document.querySelector('.progess-bar .progess').style.left = '0%';
+                document.querySelector('.progess-bar .progess').style.width = ((thisCount / count) * 100) + '%';
+            },
+
+            onLogLine(data) {
+                if (data.message == "Initializing session") {
+                    document.querySelector('.tip .label').innerHTML = VK.config.loadingSessionText;
+                }
+            }
+        };
+
+        window.addEventListener('message', function (e) {
+            (handlers[e.data.eventName] || function () { })(e.data);
+        });
+    </script>
+</body>
+</html>
