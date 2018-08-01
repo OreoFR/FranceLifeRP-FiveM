@@ -1,0 +1,54 @@
+<html>
+<head>
+<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<!-- Menu RP (boire, manger, WC) | Main RP (drink, eat, WC) -->
+<div class="mainRP">
+<div class="bJaugeMoney"><div class='bJaugesRPi' id='money'>-</div></div>
+<div class="devise"><div class="devisei">-</div></div>
+<div class="bJob"><div class='bJobi sansEmploi' id='job'>-</div></div>
+<div class="bJaugesRP">
+<div class='bJaugesRPi_small' id='eat_joueur'>-</div>
+<div class='bJaugesRPi_small' id='drink_joueur'>-</div>
+<div class='bJaugesRPi_small' id='wc_joueur'>-</div>
+</div>
+</div>
+
+<div class="menuInteractif none">
+<div class="titleMenu1 primaryColor menuPersonnel"><div class="titleMenu1i">Menu personnel</div></div>
+<div class="liMenu selectedMenu">
+<div class="liMenui" data-lang="14"></div>
+<div class="liMenuiQTE menuEmotes"></div>
+</div>
+<div class="liMenu buttonEat" data-action='eat'>
+<div class="liMenui" data-lang="15"></div>
+<div class="liMenuiQTE menuEat"></div>
+</div>
+<div class="liMenu buttonDrink" data-action='drink'>
+<div class="liMenui" data-lang="16"></div>
+<div class="liMenuiQTE menuDrink"></div>
+</div>
+<div class="liMenu buttonWC" data-action='wc'>
+<div class="liMenui" data-lang="17"></div>
+<div class="liMenuiQTE menuWC"></div>
+</div>
+</div>
+
+</body>
+
+<script src="languages.js" type="text/javascript"></script>
+
+<!-- On charge toutes les fonctions JS | Load all JS functions -->
+<script src="./js/fonctions/colorText.js" type="text/javascript"></script>
+<script src="./js/fonctions/effetCompteur.js" type="text/javascript"></script>
+<script src="./js/fonctions/replaceAll.js" type="text/javascript"></script>
+
+<script src="./js/script.js" type="text/javascript"></script>
+<script src="./js/playSounds.js" type="text/javascript"></script>
+<script src="./js/menu.js" type="text/javascript"></script>
+
+</html>

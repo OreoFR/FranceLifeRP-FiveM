@@ -1,0 +1,102 @@
+@font-face{font-family: pcdown; src: url(pdown.ttf);}
+
+.interactionMoney{position: absolute; top: 20; left: 10; font-size: 40px;}
+
+.mainRP{display: none;}
+
+.bJaugeMoney{position: absolute; top: 50; right: 55; text-align: right; font-size: 40px;}
+.bJob{position: absolute; top: 111; right: 20; text-align: right; font-size: 30px;}
+.bJaugesRP{position: absolute; top: 172; right: 20; text-align: right; width: 115px; font-size: 35px;}
+
+.devise{position: absolute; top: 50; right: 20; text-align: right; font-size: 40px;}
+
+.bJaugesRPi, .bJobi, .bJaugesRPi_small, .bTitle, .interactionMoneyi, .devisei{position: relative; right: 10; font-family: pcdown; color: white; 
+text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;}
+
+.devisei{padding: 6px 6px 6px 12px;}
+.bJaugesRPi{padding: 6px 6px 6px 60px;}
+.bJobi{padding: 6px 6px 6px 50px;}
+.bJaugesRPi_small{padding: 6px 6px 6px 20px;}
+.interactionMoneyi{padding: 0px 0px 6px 20px;}
+
+/* -------------------------------------------------------------------------------------- Emojis du menu RP (haut-droit) | Emojis for the menu Rôle-Play */
+/* Biblio Emojis ici: http://getemoji.com/ */
+#money:before{content: '💳'; position: absolute; top: 2; left: 0;}
+#heart:before{content: '❤️'; position: absolute; top: 3; left: 0;}
+#drink_joueur:before{content: '🍺'; position: absolute; top: 3; left: 4;}
+#eat_joueur:before{content: '🍔'; position: absolute; top: 3; left: 0;}
+#wc_joueur:before{content: '🚽'; position: absolute; top: 3; left: 2;}
+#maladie:before{content: '💊'; position: absolute; top: 3; left: 0;}
+
+/* -------------------------------------------------------------------------------------- Emojis des métiers | Emojis for the jobs */
+.sansEmploi:before{content: '🎫'; position: absolute; top: 5; left: 0;}
+.job6:before{content: '🚛'; position: absolute; top: 2; left: 0;} /* Routier | Trucker */
+.job:before{content: '🚓'; position: absolute; top: 2; left: 0;} /* Policier | Policeman */
+.job:before{content: '🚒'; position: absolute; top: 2; left: 0;} /* Pompier | Firefighter*/
+.job:before{content: '🚑'; position: absolute; top: 2; left: 0;} /* Ambulancier */
+.job:before{content: '🚌'; position: absolute; top: 2; left: 0;} /* Bus */
+.job:before{content: '🚕'; position: absolute; top: 2; left: 0;} /* Taxi */
+.job:before{content: '🚁'; position: absolute; top: 4; left: 0;} /* Taxi hélico */
+
+/* -------------------------------------------------------------------------------------- États | States */
+.danger{color: #F03A17;}
+.good{color: #18D725;}
+.gold{color: #FFB900;}
+.none{display: none;}
+
+/* -------------------------------------------------------------------------------------- Affichage d' une information | Display the information */
+
+.bTitle{padding: 10px 2px 15px 20px;}
+
+/* Attention le background en rgba n' est pas prise en charge */
+.modelView1, .modelView2{position: absolute; width: 800px; font-size: 30px; text-align: center; background: #1B1B1B; border: 6px solid rgba(0,0,0,0.2);
+left: 50%; /* on positionne l'élément à la moitié de l'écran */
+margin-left: -400px; /* on applique une marge négative de la moitié de la largeur de l'élément */
+bottom: 100;}
+
+/* -------------------------------------------------------------------------------------- Affichage d' une menu interactif | Viewing an interactive menu */
+.menuInteractif{position: absolute; width: 400px; left: 20px; top: 20px;
+-webkit-box-shadow: rgba(0,0,0,0.2) 3px 3px 2px;
+-moz-box-shadow: rgba(0,0,0,0.2) 3px 3px 2px;
+box-shadow: rgba(0,0,0,0.2) 3px 3px 2px;}
+
+.titleMenu1{width: 100%; height: 50px; border-radius: 5px 5px 0px 0px; border: 2px solid rgba(0,0,0,0.2); font-size: 28px;}
+
+.titleMenu1i{position: relative; right: 10; font-family: pcdown; color: white;
+text-shadow: -2px -2px 0 rgba(0,0,0,0.1), 2px -2px 0 rgba(0,0,0,0.1), -2px 2px 0 rgba(0,0,0,0.1), 2px 2px 0 rgba(0,0,0,0.1);}
+
+.titleMenu1i{padding: 6px 6px 6px 30px;}
+
+.menuPersonnel:before{content: '😁'; position: absolute; top: 9px; right: -1px; font-size: 30px;}
+
+.liMenu{position: relative; width: calc(100% + 4px); height: 50px; background: white; border-bottom: 2px solid rgba(0,0,0,0.1); color: #242424;}
+.liMenu:last-child{border-bottom: 4px solid rgba(0,0,0,0.2);}
+
+.liMenui{position: absolute; left: 10; top: 15px; font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: bold; text-transform: uppercase;}
+
+.liMenuiQTE{position: absolute; width: 50px; height: 50px; right: 0; background: rgba(0,0,0,0.1); border-left: 2px solid rgba(0,0,0,0.1);
+-webkit-box-shadow: rgba(0,0,0,0.2) 3px 3px 2px;
+-moz-box-shadow: rgba(0,0,0,0.2) 3px 3px 2px;
+box-shadow: rgba(0,0,0,0.2) 3px 3px 2px;}
+
+.liMenuiQTEi{font-family: pcdown; color: white; font-size: 20px; padding: 12px 0px 0px 0px; text-align: center;
+text-shadow: -2px -2px 0 rgba(0,0,0,0.1), 2px -2px 0 rgba(0,0,0,0.1), -2px 2px 0 rgba(0,0,0,0.1), 2px 2px 0 rgba(0,0,0,0.1);}
+
+.selectedMenu{background: #FFC83D; color: white;}
+
+/* -------------------------------------------------------------------------------------- Emojis du menu personnel */
+.menuEmotes:before{content: '🎭'; position: absolute; top: 10; left: 5; font-size: 25px;}
+.menuDrink:before{content: '🍺'; position: absolute; top: 10; left: 9; font-size: 25px;}
+.menuEat:before{content: '🍔'; position: absolute; top: 9; left: 7; font-size: 25px;}
+.menuWC:before{content: '🚽'; position: absolute; top: 8; left: 8; font-size: 25px;}
+
+/* -------------------------------------------------------------------------------------- Couleurs primaires */
+.primaryColor{background: #242424;}
+
+/* -------------------------------------------------------------------------------------- Classes de test | Class of test */
+.black{background: black;}
+.white{background: white;}
+.red{background: red;}
+.green{background: green;}
+.blue{background: blue;}
+.purple{background: purple;}
