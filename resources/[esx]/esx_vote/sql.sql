@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `vote` VARCHAR(254) NULL;
