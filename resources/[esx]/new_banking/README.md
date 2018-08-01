@@ -1,4 +1,4 @@
-# SCRIPT ATM REFAIT
+# SCRIPT ATM MODIFIER
 
 Script modifier par moi même avec une interface RP de la BNP Paribas
 
