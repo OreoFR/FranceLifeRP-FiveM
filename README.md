@@ -17,4 +17,5 @@ J'ai arrêté mon projet de mon côté, certain diront que c'est nul d'autre von
 - Quelques entreprise fait maison ( Armurier/Night Club et pas mal d'autres )
 - Restructuration du menu Concessionaire pour vendre que des véhicule moddé triée par marques
 - Fix de pas mal de bugs ( Facture en négatif/Coffre véhicules/Duplication d'Argent Sale/Duplication lors du farm
-- 
+- Plus de 5 Radio FR en DIRECT disponible en JEU ( Avec les images des radio au lieu de celle de GTA de base )
+J'ajouterais le reste au fur et a mesure car y'a vraiment trop de truc que sa sois du modding de la map etc etc etc
