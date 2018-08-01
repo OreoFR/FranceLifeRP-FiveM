@@ -1,0 +1,198 @@
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<style>
+
+		@font-face {
+			font-family: bankgothic;
+			src: url('bankgothic.ttf');
+		}
+
+		@font-face {
+			font-family: pcdown;
+			src: url('pdown.ttf');
+		}
+
+		body {
+			display : none;
+		}
+
+		#controls {
+			font-family   : pcdown;
+			font-size     : 3em;
+			color         : #FFF;
+			position      : absolute;
+			bottom        : 40;
+			right         : 40;
+			
+			text-shadow:
+		   	-1px -1px 0 #000,
+				 1px -1px 0 #000,
+				-1px  1px 0 #000,
+				 1px  1px 0 #000
+			;
+		}
+
+		#menu {
+				font-family     : bankgothic;  
+		    width           : 350px;
+		    background-color: #506be6;
+		    color           : #fff;
+		    box-shadow      : 0px 0px 50px 0px #000;
+		    position        : absolute;
+		    left            : 40;
+		    top             : 40;
+		}
+
+		#menu .head {
+			text-align  : center;
+	    height      : 40px;
+	    line-height : 40px;
+		}
+
+		#menu .line {
+			text-align: center;
+		}
+
+		#menu .line {
+		    height          : 40px;
+		    display         : block;
+		    background-color: #f1f1f1;
+		    box-shadow      : inset 1px 0px 0px 1px #b8b8b8;
+		    height          : 32px;
+		    line-height     : 32px;
+		    color           : #3A3A3A;
+		}
+
+		#menu .selected {
+			background-color: #d0d0d0;
+		}
+
+		#menu .counter {
+			font-weight: bold;
+		}
+
+	</style>
+</head>
+
+<body>
+	<center><font size=9 color=red>Votre personnage restera avec ce Skin jusqu'à l'arriver des magasins en ville</font></center>
+	<center><font size=14 color=red>Appuyer sur ENTRER pour valider votre personnage</font></center>
+	<div id="menu">
+		<div class="head">Skin Menu</div>
+		<div class="line selected">Sexe &lt; <span class="counter" id="sex">0</span> &gt;</div>
+		<div class="line">Visage &lt; <span class="counter" id="face">0</span> &gt;</div>
+		<div class="line">Peau &lt; <span class="counter" id="skin">0</span> &gt;</div>
+		<div class="line">Type Barbe &lt; <span class="counter" id="beard_1">0</span> &gt;</div>
+		<div class="line">Taille barbe  &lt; <span class="counter" id="beard_2">0</span> &gt;</div>
+		<div class="line">Couleur barbe 1 &lt; <span class="counter" id="beard_3">0</span> &gt;</div>
+		<div class="line">Couleur barbe 2 &lt; <span class="counter" id="beard_4">0</span> &gt;</div>
+		<div class="line">Cheveux 1 &lt; <span class="counter" id="hair_1">0</span> &gt;</div>
+		<div class="line">Cheveux 2  &lt; <span class="counter" id="hair_2">0</span> &gt;</div>
+		<div class="line">Couleur cheveux 1&lt; <span class="counter" id="hair_color_1">0</span> &gt;</div>
+		<div class="line">Couleur cheveux 2&lt; <span class="counter" id="hair_color_2">0</span> &gt;</div>
+		<div class="line">T-Shirt 1 &lt; <span class="counter" id="tshirt_1">0</span> &gt;</div>
+		<div class="line">T-Shirt 2 &lt; <span class="counter" id="tshirt_2" data-textureof="tshirt_1">0</span> &gt;</div>
+		<div class="line">Torse 1 &lt; <span class="counter" id="torso_1">0</span> &gt;</div>
+		<div class="line">Torse 2 &lt; <span class="counter" id="torso_2" data-textureof="torso_1">0</span> &gt;</div>
+		<!--div class="line">Calques 1 &lt; <span class="counter" id="decals_1">0</span> &gt;</div>
+		<div class="line">Calques 2 &lt; <span class="counter" id="decals_2" data-textureof="decals_1">0</span> &gt;</div-->
+		<div class="line">Bras &lt; <span class="counter" id="arms">0</span> &gt;</div>
+		<div class="line">Jambes 1 &lt; <span class="counter" id="pants_1">0</span> &gt;</div>
+		<div class="line">Jambes 2 &lt; <span class="counter" id="pants_2" data-textureof="pants_1">0</span> &gt;</div>
+		<div class="line">Chaussures 1 &lt; <span class="counter" id="shoes_1">0</span> &gt;</div>
+		<div class="line">Chaussures 2 &lt; <span class="counter" id="shoes_2" data-textureof="shoes_1">0</span> &gt;</div>
+		<!--div class="line">Masque 1 &lt; <span class="counter" id="mask_1">0</span> &gt;</div>
+		<div class="line">Masque 2 &lt; <span class="counter" id="mask_2" data-textureof="mask_1">0</span> &gt;</div>
+		<div class="line">Parre balle 1 &lt; <span class="counter" id="bproof_1">0</span> &gt;</div>
+		<div class="line">Parre balle 2 &lt; <span class="counter" id="bproof_2" data-textureof="bproof_1">0</span> &gt;</div-->
+		<div class="line">Chaine 1 &lt; <span class="counter" id="chaine_1">0</span> &gt;</div>
+		<div class="line">Chaine 2 &lt; <span class="counter" id="chaine_2" data-textureof="chaine_1">0</span> &gt;</div>
+		<div class="line">Casque 1 &lt; <span class="counter" id="helmet_1">0</span> &gt;</div>
+		<div class="line">Casque 2 &lt; <span class="counter" id="helmet_2" data-textureof="helmet_1">0</span> &gt;</div>
+		<div class="line">Lunettes 1 &lt; <span class="counter" id="glasses_1">0</span> &gt;</div>
+		<div class="line">Lunettes 2 &lt; <span class="counter" id="glasses_2"  data-textureof="glasses_1">0</span> &gt;</div>
+	</div>
+
+	<div id="controls">
+		<span><img src="img/keys/enter.png"/>&nbsp;Confirmer</span>
+	</div>
+
+	<script>
+
+		window.onload = function(e){
+			
+			let current   = 0;
+			let elemCount = $('#menu .line').length;
+
+			// NUI Callback
+			window.addEventListener('message', function(event){
+				
+				let data = event.data;
+
+				if(data.maxVals)
+					for(let k in data.maxVals)
+						$('#' + k).data('max', data.maxVals[k])
+
+				if(data.setDisplay === true){
+
+					for(let k in data.vals)
+						$('#' + k).text(data.vals[k])
+
+					$(document.body).show();
+				}
+
+				if(data.setDisplay === false)
+					$(document.body).hide();
+
+				if(data.move){
+
+					let elem = $($('#menu .line .counter')[current]);
+
+					if(data.move == 'LEFT'){
+
+						let val = parseInt(elem.text());
+
+						if(val > 0)
+							elem.text(val - 1)
+
+						$('[data-textureof=' + elem.attr('id') + ']').text(0);
+					}
+
+					if(data.move == 'RIGHT'){
+
+						let val    = parseInt(elem.text());
+						let maxVal = parseInt(elem.data('max'));
+						
+						if(val < maxVal)
+							elem.text(val + 1)
+
+						$('[data-textureof=' + elem.attr('id') + ']').text(0);
+					}
+
+					if(data.move == 'UP' && current > 0)
+						current--;
+
+					if(data.move == 'DOWN' && current < elemCount - 1)
+						current++;
+			
+					elem = $($('#menu .line .counter')[current]);
+
+					$('#menu .line').removeClass('selected');
+					$($('#menu .line')[current]).addClass('selected');
+
+
+					$.post('http://skinchanger/change', JSON.stringify({
+						target: elem.attr('id'),
+						value : parseInt(elem.text())
+					}));
+
+				}
+
+			});
+
+		}
+
+	</script>
+
+</body>
