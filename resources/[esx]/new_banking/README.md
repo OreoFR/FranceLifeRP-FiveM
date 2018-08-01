@@ -1,21 +1,15 @@
-FXServer NEW_BANKING
+# SCRIPT ATM REFAIT
 
-NOTICE: If you edit this script, I will not provide support. I will only provide support for this script in it's unedited state.
+Script modifier par moi même avec une interface RP de la BNP Paribas
 
-[REQUIREMENTS]
+# Support : https://discord.gg/FranceLife
 
-Dependencies For Full Functionality
+
+[PRE REQUIS]
 
 es_extended => https://github.com/ESX-Org/es_extended
 
-
-
-Install To resources/[esx]/new_banking << MUST BE INSTALLED HERE
-
-
-Add this in your server.cfg :
-start new_banking
+--
 
 Credits: Script Created By: @onlyserenity(amjedcha)
 
-Licensing: Please do not edit the background picture of the tablet or post it anywhere else claiming it's yours without @onlyserenity's permission.
