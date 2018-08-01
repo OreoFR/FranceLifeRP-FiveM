@@ -4,7 +4,7 @@ Je le met ici a disposition de tout le monde, vous pouvez le lancer directement 
 
 Je fourni la base de donnée.
 
-# SI VOUS AVEZ BESOIN DE SUPPORT POUR DES BUGS ( sur le pack pas sur vos problème a vous ) Vous pouvez venir ici 
+# SI VOUS AVEZ BESOIN DE SUPPORT POUR DES BUGS Vous pouvez venir ici 
 # https://discord.gg/FranceLife
 
 J'ai arrêté mon projet de mon côté, certain diront que c'est nul d'autre vont aimer.. Il y a pas mal de choses dessus 
