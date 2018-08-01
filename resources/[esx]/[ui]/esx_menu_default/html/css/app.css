@@ -1,0 +1,89 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+html, html * {
+  font-family: Roboto;
+
+}
+.menu {
+  font-family: Oswald;
+  width      : 350px;
+  color      : #4E3D28; --fond
+  box-shadow : 0px 0px 50px 0px #000;
+  position   : absolute;
+border-radius:50px !important;
+background-color:#343434;
+}
+
+.menu.align-top-right {
+  right: 10;
+  top  : 40;
+}
+
+.menu.align-right {
+  right: 40;
+  top  : 50%;
+  transform: translate(0, -50%);
+}
+
+.menu.align-bottom-right {
+  right : 40;
+  bottom: 40;
+}
+
+.menu.align-bottom {
+  left  : 50%;
+  bottom: 40;
+  transform: translate(-50%, 0);
+}
+
+.menu.align-bottom-left {
+  left  : 40;
+  bottom: 40;
+}
+
+.menu.align-center {
+  left : 50%;
+  top  : 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.menu .head {
+  text-align      : center;
+  height          : 100px;
+  line-height     : 96px;
+  display: block;
+  color: #00000; --blanc
+  font-size: 32px;
+  cursor: pointer;
+  background-image:url("https://cdn.discordapp.com/attachments/444159110846349322/459092229286264853/baniieremenufd.png")
+
+}
+
+.menu .menu-items {
+  max-height : 600px;
+  overflow-y : auto;
+}
+
+.menu .menu-items .menu-item {
+  height          : 40px;
+  display         : block;
+background-color:#343434;
+
+  height          : 32px;
+  line-height     : 32px;
+  color           : #FFF;
+  text-align      : center;
+}
+
+.menu .menu-items .menu-item.selected {
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+text-align      : center;
+overflow-y : auto;
+padding-top:10px;
+border-radius:5px;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  line-height: 20px;
+}
