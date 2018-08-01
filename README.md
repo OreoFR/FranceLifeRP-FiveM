@@ -1,4 +1,4 @@
-<center># FranceLife
+# FranceLife
 Pack de mon Serveur au complet sous ESX !
 
 ![alt text](https://image.noelshack.com/fichiers/2018/31/4/1533164803-france-life-rp.png)
@@ -24,4 +24,4 @@ J'ai arrêté mon projet de mon côté, certain diront que c'est nul d'autre von
 - Fix de pas mal de bugs ( Facture en négatif/Coffre véhicules/Duplication d'Argent Sale/Duplication lors du farm
 - Plus de 5 Radio FR en DIRECT disponible en JEU ( Avec les images des radio au lieu de celle de GTA de base )
 
-J'ajouterais le reste au fur et a mesure car y'a vraiment trop de truc que sa sois du modding de la map etc etc etc</center>
+J'ajouterais le reste au fur et a mesure car y'a vraiment trop de truc que sa sois du modding de la map etc etc etc
