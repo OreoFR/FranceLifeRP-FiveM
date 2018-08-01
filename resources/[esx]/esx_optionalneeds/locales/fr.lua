@@ -1,0 +1,20 @@
+Locales['fr'] = {
+	
+	['used_beer'] = 'Vous avez utilisé 1x ~y~Bière~s~',
+	['used_vodka'] = 'Vous avez bue de la vodka ~y~-LA TU ES BOURRER-~s~',
+	['used_rhum'] = 'vous avez bue du rhum ~y~-LA TU ES BOURRER-~s~ ',
+	['used_whisky'] = 'vous avez bue du whisky ~y~-LA TU ES BOURRER-~s~ ',
+	['used_martini'] = 'vous avez bue un Martini-Blanc ~y~-LA TU ES BOURRER-~s~',
+	['used_tequila'] = 'vous avez bue une tequila ~y~-LA TU ES BOURRER-~s~',
+	['used_jager'] = 'vous avez bue une jager ~y~-LA TU ES BOURRER-~s~',
+	['used_rhumcoca'] = 'vous avez bue du RHUM-COCA ~y~-LA TU ES BOURRER-~s~',
+	['used_jagerbomb'] = 'vous avez bue un jager-bomb ~y~-LA TU ES BOURRER-~s~',
+	['used_golem'] = 'vous avez bue un golem ~y~-LA TU ES BOURRER-~s~',
+	['used_whiskycoca'] = 'vous avez bue du whisky-coca ~y~-LA TU ES BOURRER-~s~',
+	['used_vodkaenergy'] = 'vous avez bue une vodka-energy ~y~-LA TU ES BOURRER-~s~',
+	['used_vodkafruit'] = 'vous avez bue une vodka-fruit ~y~-LA TU ES BOURRER-~s~',
+	['used_teqpaf'] = 'vous avez bue du teqpaf ~y~-LA TU ES BOURRER-~s~',
+	['used_mojito'] = 'vous avez bue du mojito ~y~-LA TU ES BOURRER-~s~',
+	['used_metreshooter'] = 'vous avez bue un metre-shooter ~y~-LA TU ES BOURRER-~s~',
+	['used_jagercerbere'] = 'vous avez bue jager-cerbere ~y~-LA TU ES BOURRER-~s~',
+}
