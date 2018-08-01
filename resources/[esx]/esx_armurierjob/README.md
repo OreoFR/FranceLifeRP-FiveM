@@ -4,4 +4,4 @@ Script modifier par moi même pour pouvoir vendre des arme en temps qu'entrepris
 
 - Authorized Weapons c'est les armes que l'armurier ( pas les joueurs ) peuvent acheté dans le QG entreprise.
 
-# Support : discord.gg/FranceLife
+# Support : https://discord.gg/FranceLife
