@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Reisenberg';
+  src: url('../fonts/Reisenberg.otf') /* OTF file for CSS3 browsers */
+}
+
+.defile-parent {
+  display: block;
+  margin: 0 auto;
+  left  : 50%;
+  margin-left: -350px;
+  top: 40;
+  overflow: hidden;
+  position: absolute;
+  table-layout: fixed;
+  width: 700px;
+}
+.defile {
+  height:32px;
+  font-family: 'Reisenberg';
+  font-size: 32px;
+  color : #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
