@@ -1,0 +1,138 @@
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+* {padding: 0; margin: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif;}
+
+
+#status_list {
+	position: absolute;
+	left   : 17.5%;
+	bottom : 2.5%;
+}
+
+.playerStats{
+	position: absolute;
+	left: 350px;
+	bottom: 20px;
+  
+    
+}
+
+.carStats{
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	display: none;
+}
+
+.stat{
+	color: #fff;
+	background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	width: 220px;
+	height: 30px;
+	position: relative;
+	margin-bottom: 7px;
+	//box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+
+.stat .icon{
+	height: 30px;
+	width: 30px;
+	background-color: rgba(66,66,66 ,1);
+	border-radius: 50%;
+	position: relative;
+	display: inline-block;
+	right: 15px;
+}
+
+.stat .icon i, .stat .icon img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.stat .icon img{
+	height: 18px;
+	width: 18px;
+}
+
+
+.stat span{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: -10px;
+}
+
+
+
+.carStats .stat{
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	text-align: right;
+}
+
+.carStats .stat .icon{
+	float: right;
+	right: 0px;
+	left: 15px;
+}
+
+.carStats .stat span{
+	white-space: nowrap;
+	right: 20px;
+}
+
+.status{
+	display: inline-block;
+  
+	//width: 235px;
+	position: relative;
+	left: -15px;
+	justify-content: space-between;
+    margin-left: 4px;
+}
+
+.veh-gas{
+	display: flex;
+	width: 235px;
+	position: relative;
+	right: -15px;
+	justify-content: space-between;
+}
+
+
+.vert-stat{
+	border-radius: 50%;
+	width: 55px;
+	height: 55px;
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.vert-stat .bg{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+ 
+}
+
+.vert-stat img{
+	width: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+#gas{
+	position: absolute;
+	right: 100px;
+	bottom: 50px;
+
+}
