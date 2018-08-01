@@ -1,0 +1,131 @@
+
+/*-------------- Déclaration des polices non standard utilisées -------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#disclaimer {
+  display: none;
+}
+
+#disclaimer h1 {
+	margin: 0;
+	padding: 0;
+	color: rgb(241,110,71);
+	font-family: 'Teko', sans-serif;
+	font-size: 26px;
+	-webkit-font-smoothing: antialiased;
+}
+
+#disclaimer h2 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1em;
+	-webkit-font-smoothing: antialiased;
+}
+
+#disclaimer h3 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1em;
+	-webkit-font-smoothing: antialiased;
+}
+
+#disclaimer h4 {
+    margin: 0;
+    padding: 0;
+    color: rgb(241,110,71);
+    font-family: 'Teko', sans-serif;
+    font-size: 50px;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 20px;
+}
+
+#disclaimer p {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+#disclaimer p.imp {
+	color: #fff;
+	font-size: 0.8em;
+	text-align: left;
+	margin: auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/*--------------  DIV principale du "disclaimer" -------------- */
+
+
+#disclaimer .overlay {
+	position:fixed;
+	z-index: 1;
+	width: 100%;
+	height:100%;
+	margin: 0;
+	text-align: center;
+	background: #000;
+	opacity: 0.40;
+}
+
+/*--------------  DIV principale du "disclaimer" -------------- */
+
+
+#disclaimer .contenair {
+	position:absolute;
+	z-index: 2;
+	width: 1000px;
+	height:700px;
+	left:50%;
+	top:50%;
+	margin:-350px 0 0 -500px;
+	text-align: center;
+	background: url('img/bg-img.png');
+	padding: none;
+}
+
+/*-------------- DIV contenant les textes du disclaimer --------------*/
+
+
+#disclaimer .innerbox {
+	z-index: 2;
+	width: 550px;
+	margin: 0px 50px 14px 400px;
+	text-align: left;
+	background: transparent;
+	-webkit-font-smoothing: antialiased;
+}
+
+#disclaimer .spacer {
+	z-index: 2;
+	width: 100%;
+	height: 85px;
+    margin: 0;
+	text-align: left;
+    background: transparent;
+}
+
+#disclaimer .footspacer {
+	z-index: 2;
+	width: 100%;
+	height: 80px;
+    margin: 0;
+	text-align: left;
+    background: transparent;
+}
+
+#disclaimer .footerbox {
+  z-index: 2;
+  width: 450px;
+  margin: 57px 0px 0px 480px;
+  height: 110px;
+  text-align: left;
+}
