@@ -1,0 +1,12 @@
+-- Begin of log for 08-27-17 --
+== EssentialMode started, version 5.0.0 ==
+User (steam:110000106f3226c) loaded
+Version mismatch was detected, updater version: 4.6.3(5.0.0)
+== EssentialMode started, version 5.0.0 ==
+User (steam:110000106f3226c) loaded
+User (steam:110000106f3226c) saved and unloaded
+Version mismatch was detected, updater version: 4.6.3(5.0.0)
+== EssentialMode started, version 5.0.0 ==
+Version mismatch was detected, updater version: 4.6.3(5.0.0)
+== EssentialMode started, version 5.0.0 ==
+User (steam:110000106f3226c) loaded

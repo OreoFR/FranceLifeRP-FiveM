@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<audio id="JumpModeAudio" loop>
+			 <source src="JumpMode.ogg" type="audio/ogg">
+		</audio>
+        <script>
+        var JMAudio = document.getElementById("JumpModeAudio"); 
+        
+        window.addEventListener('message', function(event) {
+            
+            if (event.data.playJumpMode == true) {
+                JMAudio.volume = 1.0;
+                JMAudio.play();
+				}
+			else if (event.data.stopJumpMode == true) {
+                JMAudio.pause();
+            }
+        });
+		
+        </script>
+    </head>
+</html>
