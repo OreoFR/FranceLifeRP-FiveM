@@ -1,7 +1,7 @@
 -- CONFIG --
 
 -- The watermark text --
-servername = "Discord OBLIGATOIRE : https://discord.gg/FranceLifeRP"
+servername = "Version 1.72"
 
 -- The x and y offset (starting at the top left corner) --
 -- Default: 0.005, 0.001
@@ -18,7 +18,7 @@ alpha = 255
 -- Text scale
 -- Default: 0.4
 -- NOTE: Number needs to be a float (so instead of 1 do 1.0)
-scale = 0.5
+scale = 0.4
 
 -- Text Font --
 -- 0 - 5 possible
