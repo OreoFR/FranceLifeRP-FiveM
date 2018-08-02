@@ -1,2 +1,0 @@
-# speedometer
-Compteur de vitesse
