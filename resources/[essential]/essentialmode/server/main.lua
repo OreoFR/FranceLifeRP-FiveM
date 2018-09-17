@@ -3,7 +3,7 @@
 -- NO TOUCHY, IF SOMETHING IS WRONG CONTACT KANERSPS! --
 -- NO TOUCHY, IF SOMETHING IS WRONG CONTACT KANERSPS! --
 
-_VERSION = '5.0.2'
+_VERSION = '5.0.3'
 
 -- Server
 
@@ -39,6 +39,22 @@ end)
 
 local justJoined = {}
 
+RegisterServerEvent('playerConnecting')
+AddEventHandler('playerConnecting', function(name, setKickReason)
+	local id
+	for k,v in ipairs(GetPlayerIdentifiers(source))do
+		if string.sub(v, 1, string.len("steam:")) == "steam:" then
+			id = v
+			break
+		end
+	end
+
+	if not id then
+		setKickReason("Unable to find SteamID, please relaunch FiveM with steam open or restart FiveM & Steam if steam is already open")
+		CancelEvent()
+	end
+end)
+
 RegisterServerEvent('es:firstJoinProper')
 AddEventHandler('es:firstJoinProper', function()
 	local Source = source
@@ -52,7 +68,7 @@ AddEventHandler('es:firstJoinProper', function()
 		end
 
 		if not id then
-			DropPlayer(Source, "Couldn't find SteamID please re-launch the game while Steam is open")
+			DropPlayer(Source, "SteamID not found, please try reconnecting with Steam open.")
 		else
 			registerUser(id, Source)
 			justJoined[Source] = true
