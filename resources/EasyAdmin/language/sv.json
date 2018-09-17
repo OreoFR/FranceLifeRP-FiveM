@@ -55,7 +55,6 @@
 	"refreshbanlist":"Uppdatera Bannlistan",
 	"refreshbanlistguide":"Detta uppdaterar Bannlistan i 'Häv Bannlysning'-menyn.\nKräver återuppöppning.",
 	"refreshpermissions":"Uppdatera Rättigheter",
-	"refreshpermissionsguide":"This Refreshes your current Permissions.\nRequires Reopening.",
 	"refreshpermissionsguide":"Detta uppdaterar dina nuvarande rättigheter.\nKräver återuppöppning.",
 	"godmodedetected":"Gudläge: ~r~Upptäckt~w~",
 	"godmodenotdetected":"Gudläge: ~g~Inget Upptäckt~w~",
@@ -92,6 +91,13 @@
 	"adminfrozeplayer":"**%s** frös **%s**.",
 	"adminunfrozeplayer":"**%s** avfrös **%s**.",
 	
-	
+	"left":"Vänster",
+	"middle":"Mitten",
+	"right":"Höger",
+	"menuOrientation":"Menyorientering",
+	"menuOrientationguide":"Ställ in menyorientering ( Vänster, Höger eller Mellan ) \nKräver omstart av spel.",
+	"menuOffset":"Menyförskjutning",
+	"menuOffsetguide":"Ställ in menystorlek Offset\nKräver återåterställning av meny.",
+	"resetmenuOffset":"Reset Meny Offset",
 	}
 ]

@@ -8,7 +8,7 @@ function MenuPool.New()
 	return setmetatable(_MenuPool, MenuPool)
 end
 
-function MenuPool:AddSubMenu(Menu, Text, Description, KeepPosition)
+function MenuPool:AddSubMenu(Menu, Text, Description, KeepPosition, KeepBanner)
 	if Menu() == "UIMenu" then
 		local Item = UIMenuItem.New(tostring(Text), Description or "")
 		Menu:AddItem(Item)
@@ -17,6 +17,14 @@ function MenuPool:AddSubMenu(Menu, Text, Description, KeepPosition)
 			SubMenu = UIMenu.New(Menu.Title:Text(), Text, Menu.Position.X, Menu.Position.Y)
 		else
 			SubMenu = UIMenu.New(Menu.Title:Text(), Text)
+		end
+		if KeepBanner then
+			if Menu.Logo ~= nil then
+				SubMenu.Logo = Menu.Logo
+			else
+				SubMenu.Logo = nil
+				SubMenu.Banner = Menu.Banner
+			end
 		end
 		self:Add(SubMenu)
 		Menu:BindMenuToItem(SubMenu, Item)
@@ -54,10 +62,10 @@ function MenuPool:ResetCursorOnOpen(bool)
 	end
 end
 
-function MenuPool:FormatDescriptions(bool)
+function MenuPool:MultilineFormats(bool)
 	if bool ~= nil then
 		for _, Menu in pairs(self.Menus) do
-			Menu.Settings.FormatDescriptions = tobool(bool)
+			Menu.Settings.MultilineFormats = tobool(bool)
 		end
 	end
 end
@@ -75,7 +83,7 @@ end
 function MenuPool:WidthOffset(offset)
 	if tonumber(offset) then
 		for _, Menu in pairs(self.Menus) do
-			Menu.WidthOffset = tonumber(offset)
+			Menu:SetMenuWidthOffset(tonumber(offset))
 		end
 	end
 end
@@ -94,6 +102,14 @@ function MenuPool:DisableInstructionalButtons(bool)
 			Menu.Settings.InstructionalButtons = tobool(bool)
 		end
 	end
+end
+
+function MenuPool:MouseControlsEnabled(bool)
+    if bool ~= nil then
+        for _, Menu in pairs(self.Menus) do
+            Menu.Settings.MouseControlsEnabled = tobool(bool)
+        end
+    end
 end
 
 function MenuPool:RefreshIndex()
@@ -147,6 +163,7 @@ function MenuPool:CloseAllMenus()
 	for _, Menu in pairs(self.Menus) do
 		if Menu:Visible() then
 			Menu:Visible(false)
+			Menu.OnMenuClosed(Menu)
 		end
 	end
 end
@@ -165,4 +182,12 @@ function MenuPool:SetBannerRectangle(Rectangle)
 			Menu:SetBannerRectangle(Rectangle)
 		end
 	end
+end
+
+function MenuPool:TotalItemsPerPage(Value)
+    if tonumber(Value) then
+        for _, Menu in pairs(self.Menus) do
+            Menu.Pagination.Total = Value - 1
+        end
+    end
 end

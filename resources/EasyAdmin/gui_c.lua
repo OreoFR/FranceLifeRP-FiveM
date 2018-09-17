@@ -18,8 +18,6 @@ permissions = {
 }
 
 _menuPool = NativeUI.CreatePool()
-mainMenu = NativeUI.CreateMenu("EasyAdmin", "~b~Admin Menu", 600, 0)
-_menuPool:Add(mainMenu)
 
 -- generate "slap" table once
 local SlapAmount = {}
@@ -27,16 +25,43 @@ for i=1,20 do
 	table.insert(SlapAmount,i)
 end
 
+function handleOrientation(orientation)
+	if orientation == "right" then
+		return 1320
+	elseif orientation == "middle" then
+		return 730
+	elseif orientation == "left" then
+		return 0
+	end
+end
 
 Citizen.CreateThread(function()
 	TriggerServerEvent("EasyAdmin:amiadmin")
-	TriggerServerEvent("EasyAdmin:updateBanlist")
+	TriggerServerEvent("EasyAdmin:requestBanlist")
+	if not GetResourceKvpString("ea_menuorientation") then
+		SetResourceKvp("ea_menuorientation", "right")
+		SetResourceKvpInt("ea_menuwidth", 0)
+		menuWidth = 0
+		menuOrientation = handleOrientation("right")
+	else
+		menuWidth = GetResourceKvpInt("ea_menuwidth")
+		menuOrientation = handleOrientation(GetResourceKvpString("ea_menuorientation"))
+	end 
+	mainMenu = NativeUI.CreateMenu("EasyAdmin", "~b~Admin Menu", menuOrientation, 0)
+	_menuPool:Add(mainMenu)
+	
+		mainMenu:SetMenuWidthOffset(menuWidth)	
 	_menuPool:ControlDisablingEnabled(false)
 	_menuPool:MouseControlsEnabled(false)
+	
+		
 	while true do
-		_menuPool:ProcessMenus()
+		if _menuPool then
+			_menuPool:ProcessMenus()
+		end
 		if IsControlJustReleased(0, settings.button) and isAdmin == true then --M by default
 			-- clear and re-create incase of permission change+player count change
+			
 			if strings then
 				banLength = {
 					{label = strings.permanent, time = 10444633200},
@@ -47,10 +72,12 @@ Citizen.CreateThread(function()
 					{label = strings.onemonth, time = 2678400},
 					{label = strings.oneyear, time = 31536000},
 				}
-				
-				
-				GenerateMenu()
-				mainMenu:Visible(not mainMenu:Visible())
+				if mainMenu:Visible() then
+					mainMenu:Visible(false)
+				else
+					GenerateMenu()
+					mainMenu:Visible(true)
+				end
 			else
 				TriggerServerEvent("EasyAdmin:amiadmin")
 			end
@@ -71,10 +98,34 @@ function StopDrawPlayerInfo()
 end
 
 function GenerateMenu() -- this is a big ass function
-	mainMenu:Clear()
+	_menuPool:Remove()
+	_menuPool = NativeUI.CreatePool()
+	collectgarbage()
+	if not GetResourceKvpString("ea_menuorientation") then
+		SetResourceKvp("ea_menuorientation", "right")
+		SetResourceKvpInt("ea_menuwidth", 0)
+		menuWidth = 0
+		menuOrientation = handleOrientation("right")
+	else
+		menuWidth = GetResourceKvpInt("ea_menuwidth")
+		menuOrientation = handleOrientation(GetResourceKvpString("ea_menuorientation"))
+	end 
+	
+	mainMenu = NativeUI.CreateMenu("EasyAdmin", "~b~Admin Menu", menuOrientation, 0)
+	_menuPool:Add(mainMenu)
+	
+		mainMenu:SetMenuWidthOffset(menuWidth)	
+	_menuPool:ControlDisablingEnabled(false)
+	_menuPool:MouseControlsEnabled(false)
+	
 	playermanagement = _menuPool:AddSubMenu(mainMenu, strings.playermanagement,"",true)
 	servermanagement = _menuPool:AddSubMenu(mainMenu, strings.servermanagement,"",true)
 	settingsMenu = _menuPool:AddSubMenu(mainMenu, strings.settings,"",true)
+
+	mainMenu:SetMenuWidthOffset(menuWidth)	
+	playermanagement:SetMenuWidthOffset(menuWidth)	
+	servermanagement:SetMenuWidthOffset(menuWidth)	
+	settingsMenu:SetMenuWidthOffset(menuWidth)	
 
 	-- util stuff
 	players = {}
@@ -92,9 +143,11 @@ function GenerateMenu() -- this is a big ass function
 
 	for i,thePlayer in ipairs(players) do
 		thisPlayer = _menuPool:AddSubMenu(playermanagement,"["..GetPlayerServerId(thePlayer).."] "..GetPlayerName(thePlayer),"",true)
+		thisPlayer:SetMenuWidthOffset(menuWidth)
 		-- generate specific menu stuff, dirty but it works for now
 		if permissions.kick then
 			local thisKickMenu = _menuPool:AddSubMenu(thisPlayer,strings.kickplayer,"",true)
+			thisKickMenu:SetMenuWidthOffset(menuWidth)
 			
 			local thisItem = NativeUI.CreateItem(strings.reason,strings.kickreasonguide)
 			thisKickMenu:AddItem(thisItem)
@@ -135,6 +188,7 @@ function GenerateMenu() -- this is a big ass function
 		
 		if permissions.ban then
 			local thisBanMenu = _menuPool:AddSubMenu(thisPlayer,strings.banplayer,"",true)
+			thisBanMenu:SetMenuWidthOffset(menuWidth)
 			
 			local thisItem = NativeUI.CreateItem(strings.reason,strings.banreasonguide)
 			thisBanMenu:AddItem(thisItem)
@@ -242,6 +296,7 @@ function GenerateMenu() -- this is a big ass function
 	
 	
 	thisPlayer = _menuPool:AddSubMenu(playermanagement,strings.allplayers,"",true)
+	thisPlayer:SetMenuWidthOffset(menuWidth)
 	if permissions.teleport then
 		-- "all players" function
 		local thisItem = NativeUI.CreateItem(strings.teleporttome, strings.teleporttomeguide)
@@ -325,6 +380,8 @@ function GenerateMenu() -- this is a big ass function
 	
 	if permissions.unban then
 		unbanPlayer = _menuPool:AddSubMenu(servermanagement,strings.unbanplayer,"",true)
+		unbanPlayer:SetMenuWidthOffset(menuWidth)
+		
 		local reason = ""
 		local identifier = ""
 		for i,theBanned in ipairs(banlist) do
@@ -339,7 +396,7 @@ function GenerateMenu() -- this is a big ass function
 			unbanPlayer:AddItem(thisItem)
 			thisItem.Activated = function(ParentMenu,SelectedItem)
 				TriggerServerEvent("EasyAdmin:unbanPlayer", identifier)
-				TriggerServerEvent("EasyAdmin:updateBanlist")
+				TriggerServerEvent("EasyAdmin:requestBanlist")
 				_menuPool:CloseAllMenus()
 				Citizen.Wait(800)
 				GenerateMenu()
@@ -370,22 +427,59 @@ function GenerateMenu() -- this is a big ass function
 	if permissions.unban then
 		local thisItem = NativeUI.CreateItem(strings.refreshbanlist, strings.refreshbanlistguide)
 		settingsMenu:AddItem(thisItem)
-		settingsMenu.OnItemSelect = function(sender, item, index)
-			if item == thisItem then
-				TriggerServerEvent("EasyAdmin:updateBanlist")
-			end
+		thisItem.Activated = function(ParentMenu,SelectedItem)
+			TriggerServerEvent("EasyAdmin:updateBanlist")
 		end
 	end
 	
 	local thisItem = NativeUI.CreateItem(strings.refreshpermissions, strings.refreshpermissionsguide)
 	settingsMenu:AddItem(thisItem)
-	settingsMenu.OnItemSelect = function(sender, item, index)
-		if item == thisItem then
-			TriggerServerEvent("amiadmin")
-		end
+	thisItem.Activated = function(ParentMenu,SelectedItem)
+		TriggerServerEvent("amiadmin")
 	end
 	
+	local sl = {strings.left, strings.middle, strings.right}
+	local thisItem = NativeUI.CreateListItem(strings.menuOrientation, sl, 1, strings.menuOrientationguide)
+	settingsMenu:AddItem(thisItem)
+	settingsMenu.OnListChange = function(sender, item, index)
+			if item == thisItem then
+					i = item:IndexToItem(index)
+					if i == strings.left then
+						SetResourceKvp("ea_menuorientation", "left")
+					elseif i == strings.middle then
+						SetResourceKvp("ea_menuorientation", "middle")
+					else
+						SetResourceKvp("ea_menuorientation", "right")
+					end
+			end
+	end
+	local sl = {}
+	for i=0,150,10 do
+		table.insert(sl,i)
+	end
+	local thisi = 0
+	for i,a in ipairs(sl) do
+		if menuWidth == a then
+			thisi = i
+		end
+	end
+	local thisItem = NativeUI.CreateSliderItem(strings.menuOffset, sl, thisi, strings.menuOffsetguide, false)
+	settingsMenu:AddItem(thisItem)
+	thisItem.OnSliderSelected = function(index)
+		i = thisItem:IndexToItem(index)
+		SetResourceKvpInt("ea_menuwidth", i)
+		menuWidth = i
+	end
+	thisi = nil
+	sl = nil
 
+
+	local thisItem = NativeUI.CreateItem(strings.resetmenuOffset, "")
+	settingsMenu:AddItem(thisItem)
+	thisItem.Activated = function(ParentMenu,SelectedItem)
+		SetResourceKvpInt("ea_menuwidth", 0)
+		menuWidth = 0
+	end
 	
 	
 	_menuPool:RefreshIndex() -- refresh indexes
@@ -437,7 +531,7 @@ Citizen.CreateThread( function()
 	
 				StopDrawPlayerInfo()
 				ShowNotification(strings.stoppedSpectating)
-			end 
+			end
 			
 		end
 	end

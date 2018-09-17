@@ -16,7 +16,8 @@ permissions = {
 Citizen.CreateThread(function()
 	strings = json.decode(LoadResourceFile(GetCurrentResourceName(), "language/"..GetConvar("ea_LanguageName", "fr")..".json"))[1]
 	
-	moderationNotification = GetConvar("ea_moderationNotification", "https://discordapp.com/api/webhooks/454401844337442826/55Yz22vv5IgepJtbdJxEUEYvS6L4BpuIEK9tUgEmvKthpQWhTjU648L51s-cNmbObNwa")
+	
+	moderationNotification = GetConvar("ea_moderationNotification", "false")
 	RegisterServerEvent('EasyAdmin:amiadmin')
 	AddEventHandler('EasyAdmin:amiadmin', function()
 		
@@ -169,6 +170,14 @@ Citizen.CreateThread(function()
 		end
 	end)
 	
+	RegisterServerEvent("EasyAdmin:requestBanlist")
+	AddEventHandler('EasyAdmin:requestBanlist', function(playerId)
+		local src = source
+		if DoesPlayerHavePermission(source,"easyadmin.kick") then
+			TriggerClientEvent("EasyAdmin:fillBanlist", src, blacklist)
+		end
+	end)
+	
 	
 	------------------------------ COMMANDS
 	
@@ -190,6 +199,7 @@ Citizen.CreateThread(function()
 			Citizen.Trace("Unable to Add Admin ( player id invalid / invalid identifier? )\n")
 		end
 	end, true)
+	
 	
 	RegisterCommand("kick", function(source, args, rawCommand)
 		if args[1] and tonumber(args[1]) and DoesPlayerHavePermission(source,"easyadmin.kick") then
@@ -378,10 +388,51 @@ Citizen.CreateThread(function()
 		
 		SaveResourceFile(GetCurrentResourceName(), "admins.txt", content, -1)
 	end
-	
+
+	RegisterCommand("convertbanlist", function(source, args, rawCommand)
+		if GetConvar("ea_custombanlist", "false") == "true" then
+			local content = LoadResourceFile(GetCurrentResourceName(), "banlist.json")
+			local ob = json.decode(content)
+			for i,theBan in ipairs(ob) do
+				if not theBan.steam then theBan.steam = "" end
+				TriggerEvent("ea_data:addBan", theBan)
+				print("processed ban: "..theBan.identifier.."\n")
+			end
+			SaveResourceFile(GetCurrentResourceName(), "banlist.json", json.encode({}), -1)
+		else
+			print("Custom Banlist is not enabled.")
+		end
+	end, true)
 	
 	function updateBlacklist(data,remove)
-		blacklist = {}
+		-- life is pain, if you think this code sucks, SUCK MY DICK and make it better
+		if GetConvar("ea_custombanlist", "false") == "true" then 
+			
+			if data and not remove then
+				table.insert(blacklist, data)
+				TriggerEvent("ea_data:addBan", data)
+				
+			elseif data and remove then
+					for i,theBan in ipairs(blacklist) do
+						if theBan.identifier == data.identifier then
+							table.remove(blacklist,i)
+							TriggerEvent("ea_data:removeBan", theBan)
+						end
+					end
+					
+			elseif not data then
+				TriggerEvent('ea_data:retrieveBanlist', function(banlist)
+					blacklist = banlist
+					for i,theBan in ipairs(blacklist) do
+						if theBan.expire < os.time() then
+							table.remove(blacklist,i)
+							TriggerEvent("ea_data:removeBan", theBan)
+						end
+					end
+				end)
+			end
+			return
+		end
 		
 		local content = LoadResourceFile(GetCurrentResourceName(), "banlist.json")
 		if not content then
@@ -459,8 +510,7 @@ Citizen.CreateThread(function()
 		local numIds = GetPlayerIdentifiers(source)
 		for bi,blacklisted in ipairs(blacklist) do
 			for i,theId in ipairs(numIds) do
-				if blacklisted.identifier == theId or (blacklisted.steam and blacklisted.steam == theId) then
-					Citizen.Trace("user is banned")
+				if (blacklisted.identifier == theId) or (blacklisted.steam and blacklisted.steam == theId) then
 					setKickReason(string.format( strings.bannedjoin, blacklist[bi].reason, os.date('%d/%m/%Y 	%H:%M:%S', blacklist[bi].expire )))
 					print("Connection Refused, Blacklisted for "..blacklist[bi].reason.."!\n")
 					CancelEvent()
@@ -469,7 +519,6 @@ Citizen.CreateThread(function()
 			end
 		end
 	end)
-	
 	
 	
 	---------------------------------- USEFUL

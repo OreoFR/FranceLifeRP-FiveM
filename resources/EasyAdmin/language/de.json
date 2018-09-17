@@ -75,7 +75,7 @@
 	
 	"bannedjoin":"Du wurdest von diesem server gebannt, \nGrund: %s, Ban Läuft am %s ab.",
 	"kicked":"Gekickt von %s, Grund: %s",
-	"bannedjoin":"Du wurdest von diesem server gebannt, \nGrund: %s, Ban Läuft am %s ab.",
+	"banned":"Du wurdest von diesem server gebannt, \nGrund: %s, Ban Läuft am %s ab.",
 	"reasonadd":" ( Spielername: %s ), Gebannt von: %s",
 	"bancheating":"Für Cheaten Gebannt",
 	"bancheatingadd":" ( Spielername: %s )",
@@ -91,7 +91,14 @@
 	"adminfrozeplayer":"**%s** hat **%s** eingefroren.",
 	"adminunfrozeplayer":"**%s** hat **%s** entfroren.",
 	
-	
+	"left":"Links",
+	"middle":"Mitte",
+	"right":"Rechts",
+	"menuOrientation":"Menüorientation",
+	"menuOrientationguide":"Menü Orientation Setzen ( Links, Rechts or Mitte ) \nErfordert Spielneustart.",
+	"menuOffset":"Menüoffset",
+	"menuOffsetguide":"Menü Offset Setzen, dies wird das Menü Länger machen\nErfordert Neu Öffnen des Menüs.",
+	"resetmenuOffset":"Menüoffset Zurücksetzen",
 	
 	}
 ]

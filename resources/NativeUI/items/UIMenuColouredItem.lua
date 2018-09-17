@@ -10,6 +10,7 @@ function UIMenuColouredItem.New(Text, Description, MainColour, HighlightColour)
 		Rectangle = UIResRectangle.New(0, 0, 431, 38, MainColour.R, MainColour.G, MainColour.B, MainColour.A),
 		MainColour = MainColour,
 		HighlightColour = HighlightColour,
+		Activated = function(menu, item) end,
 	}
 	_UIMenuColouredItem.Base.SelectedSprite:Colour(HighlightColour.R, HighlightColour.G, HighlightColour.B, HighlightColour.A)
 	return setmetatable(_UIMenuColouredItem, UIMenuColouredItem)
@@ -110,6 +111,7 @@ function UIMenuColouredItem:SetRightBadge(Badge)
 end
 
 function UIMenuColouredItem:Draw()
+	self.Rectangle:Size(431 + self.ParentMenu.WidthOffset, self.Rectangle.Height)
 	self.Rectangle:Draw()
 	self.Base:Draw()
 end

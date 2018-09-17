@@ -75,7 +75,9 @@ end
 function MeasureStringWidthNoConvert(str, font, scale)
     BeginTextCommandWidth("STRING")
     AddLongString(str)
-    return EndTextCommandGetWidth(font) * scale
+    SetTextFont(font or 0)
+    SetTextScale(1.0, scale or 0)
+    return EndTextCommandGetWidth(true)
 end
 
 function MeasureStringWidth(str, font, scale)
