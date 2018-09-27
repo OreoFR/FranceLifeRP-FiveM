@@ -3,6 +3,12 @@ Pack de mon Serveur au complet sous ESX !
 
 ![alt text](https://image.noelshack.com/fichiers/2018/31/4/1533164803-france-life-rp.png)
 
+# UPDATE DU 27 SEPTEMBRE 2018 ! SERVEUR TOTALEMENT REPARER
+Il y avais eu des MAJ de FiveM et d'ES qui on rendu le serveur non fonctionnel
+avec un peu d'aide on a reussi a fix ceci, pour rentre le serveur fonctionnel
+veuillez utiliser le "nouveau" pack et de téléchargé ceci en core FiveM
+https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/668-32fdbeb480e45b410f62e4111636aafd9fe8314e/ !!
+
 # N'hesitez pas a faire des request sur des problème ou autre pour aider les gens !
 
 Je le met ici a disposition de tout le monde, vous pouvez le lancer directement il n'y a rien a ajouté ou autre hormis dans le config la key fivem et l'IP du serveur etc etc..

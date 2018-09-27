@@ -1,7 +1,7 @@
 -- CONFIG --
 
 -- NE PAS MODIFIER 
-servername = "Version 1.72 | © Oreo"
+servername = "Version 1.74 | © Oreo"
 -- NE PAS MODIFIER 
 
 -- The x and y offset (starting at the top left corner) --
