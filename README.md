@@ -7,7 +7,7 @@ Pack de mon Serveur au complet sous ESX !
 Il y avais eu des MAJ de FiveM et d'ES qui on rendu le serveur non fonctionnel
 avec un peu d'aide on a reussi a fix ceci, pour rentre le serveur fonctionnel
 veuillez utiliser le "nouveau" pack et de téléchargé ceci en core FiveM
-https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/668-32fdbeb480e45b410f62e4111636aafd9fe8314e/ !!
+https://github.com/OreoFR/FranceLifeRP-FiveM/releases/tag/1.74 ( FiveMCoreServer.zip ) !!
 
 # N'hesitez pas a faire des request sur des problème ou autre pour aider les gens !
 
