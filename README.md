@@ -31,4 +31,6 @@ J'ai arrêté mon projet de mon côté, certain diront que c'est nul d'autre von
 - Plus de 5 Radio FR en DIRECT disponible en JEU ( Avec les images des radio au lieu de celle de GTA de base )
 - Des menu grave stylé ;)
 
+♥
+
 J'ajouterais le reste au fur et a mesure car y'a vraiment trop de truc que sa sois du modding de la map etc etc etc
