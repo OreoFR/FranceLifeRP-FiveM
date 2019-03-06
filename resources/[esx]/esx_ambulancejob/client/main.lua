@@ -1483,7 +1483,7 @@ Citizen.CreateThread(function()
                 TaskGoStraightToCoord(CurrentCustomer,  TargetCoords.x,  TargetCoords.y,  TargetCoords.z,  1.0,  -1,  0.0,  0.0)
                 SetEntityAsMissionEntity(CurrentCustomer,  false, true)
 
-                TriggerServerEvent('esx_taxijob:success')
+                TriggerServerEvent('esx_ambulancejob:success')
 
                 RemoveBlip(DestinationBlip)
 
