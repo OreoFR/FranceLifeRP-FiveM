@@ -3,7 +3,7 @@ Pack de mon Serveur au complet sous ESX !
 
 ![alt text](https://image.noelshack.com/fichiers/2018/31/4/1533164803-france-life-rp.png)
 
-# NOUVELLE MAJ CORRECTIVE POUR QUE TOUT REFONCTIONNE OU EN PARTI PREVU DANS LE MOIS D'AVRIL !!!!!! 
+# NOUVELLE MAJ CORRECTIVE POUR QUE TOUT REFONCTIONNE OU EN PARTI PREVU DANS LE MOIS D'AVRIL 2019 !!!!!! 
 # VENEZ SUR LE DISCORD POUR ETRE PLUS INFORMER
 Il y avais eu des MAJ de FiveM et d'ES qui on rendu le serveur non fonctionnel
 avec un peu d'aide on a reussi a fix ceci, pour rentre le serveur fonctionnel
