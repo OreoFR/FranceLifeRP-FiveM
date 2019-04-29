@@ -1,5 +1,5 @@
 
-Pack de mon Serveur au complet sous ESX !
+
 ![alt text](https://image.noelshack.com/fichiers/2018/31/4/1533164803-france-life-rp.png)
 
 # L'ANCIENNE BASE A ETE SUPPRIMER CAR ELLE ETAIT TROP VIELLE ! NOUVELLE GROSSE UPDATE PREVU EN MAI 2019
