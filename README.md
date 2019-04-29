@@ -1,7 +1,7 @@
 # FranceLife
 Pack de mon Serveur au complet sous ESX !
 
-![alt text](https://image.noelshack.com/fichiers/2018/31/4/1533164803-france-life-rp.png)
+![alt text][center](https://image.noelshack.com/fichiers/2018/31/4/1533164803-france-life-rp.png)
 
 # NOUVELLE MAJ CORRECTIVE POUR QUE TOUT REFONCTIONNE OU EN PARTI PREVU DANS LE MOIS D'AVRIL 2019 !!!!!! 
 # VENEZ SUR LE DISCORD POUR ETRE PLUS INFORMER
