@@ -4,7 +4,7 @@
 
 # L'ANCIENNE BASE A ETE SUPPRIMER CAR ELLE ETAIT TROP VIELLE ! NOUVELLE GROSSE UPDATE PREVU EN MAI 2019
 # VENEZ SUR LE DISCORD POUR ETRE PLUS INFORMER
-https://discord.gg/FranceLife
+# https://discord.gg/EHVU3TZ
 
 # SUPPORT POUR DES BUGS - Vous pouvez venir ici 
-# https://discord.gg/FranceLife
+# https://discord.gg/EHVU3TZ
